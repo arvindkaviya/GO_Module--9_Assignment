@@ -32,24 +32,12 @@ func PostHandler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println(err)
 	}
-	// txtFile, err := os.OpenFile("Users.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, os.ModeAppend)
-
-	// if err != nil {
-	// 	log.Fatalf("os.Open() failed with '%s'\n", err)
-	// }
-	// defer func(f *os.File) {
-	// 	err := f.Close()
-	// 	if err != nil {
-	// 	}
-	// }(txtFile)
 
 	fmt.Println(user1)
 	err = json.NewEncoder(w).Encode(user1)
 	if err != nil {
 		fmt.Println(err)
 	}
-
-	//w.Header().Set("Content-Type", "Application/json")
 
 }
 
